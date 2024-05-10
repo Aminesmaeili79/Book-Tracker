@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Books</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body class="relative">
+		<div class="modal">
+			<form id="form" class="relative book-inputs">
+				<div class="close-modal">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="svg-close-modal"
+					>
+						<title>window-close</title>
+						<path
+							d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+						/>
+					</svg>
+				</div>
+				<h3 class="modal-text">Add a new book</h3>
+				<label for="title">* Title:</label>
+				<input name="title" id="title" type="text" maxlength="50" required />
+				<label for="author">* Author:</label>
+				<input name="author" id="author" type="text" maxlength="35" required />
+				<label for="pages">* Pages:</label>
+				<input name="pages" id="pages" type="number" required />
+				<div class="book-isread">
+					<input name="is-read" id="is-read" type="checkbox" />
+					<label for="is-read">Already Read</label>
+				</div>
+				<button type="submit" class="add">Add</button>
+			</form>
+		</div>
+		<div class="container">
+			<header class="header">
+				<div class="logo-and-name">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="svg-logo"
+					>
+						<title>book-open-blank-variant-outline</title>
+						<path
+							d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19Z"
+						/>
+					</svg>
+					<h1 class="name">MyLibrary</h1>
+				</div>
+				<nav class="stats">
+					<div class="stats-info">
+						<p class="stats-info-text">Total:</p>
+						<p class="stats-info-count stats-info-total">0</p>
+					</div>
+					<div class="stats-info">
+						<p class="stats-info-text">Finished:</p>
+						<p class="stats-info-count stats-info-finished">0</p>
+					</div>
+				</nav>
+				<div class="sort-and-add">
+					<!-- WILL BE ADDED -->
+					<!-- <select class="sort-by" name="sort">
+						<option value="none" selected>Sort by:</option>
+						<option value="alph-title">Alphabetic - Title</option>
+						<option value="alph-author">Alphabetic - Author</option>
+						<option value="pages">Page Count</option>
+						<option value="unread">Unread</option>
+					</select> -->
+					<div class="book-add">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class="svg-add-book"
+						>
+							<title>plus-circle-outline</title>
+							<path
+								d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+							/>
+						</svg>
+						<p>Add</p>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="books">
+					<!-- BOOK PROTOTYPE -->
+					<!-- <div class="relative book">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class="svg-remove-book"
+						>
+							<title>window-close</title>
+							<path
+								d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+							/>
+						</svg>
+						<div class="book-info">
+							<h2 class="book-info-title">Title:</h2>
+							<h2 class="book-info-heading heading-title">
+								78 letter max Harry Potter and the Philosopher's Stone
+							</h2>
+						</div>
+						<div class="book-info">
+							<h2 class="book-info-title">Author:</h2>
+							<h2 class="book-info-heading heading-author">J.K. Rowling</h2>
+						</div>
+						<div class="book-info-status-items">
+							<div class="book-info-pages">
+								<h2 class="book-info-heading"><span>214</span> Pages</h2>
+							</div>
+							<div class="book-info-status">
+								<h3 class="book-info-read-status status-read">Read</h3>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</main>
+			<script src="./assets/js/script.js"></script>
+		</div>
+	</body>
+</html>
