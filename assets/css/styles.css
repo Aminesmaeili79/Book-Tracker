@@ -297,6 +297,7 @@ main {
 }
 .book-info {
 	max-width: 100%;
+	overflow: scroll;
 }
 .book-info * {
 	font-weight: 300;
@@ -315,11 +316,6 @@ main {
 }
 .book-info-heading {
 	font-size: 2rem;
-}
-.book-info-content {
-	max-width: 100%;
-	font-size: 2rem;
-	white-space: normal;
 }
 .heading-title {
 	font-weight: 500;
