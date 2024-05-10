@@ -167,6 +167,8 @@ bookInfoForm.addEventListener("submit", (event) => {
 	// CLEARING INPUT FIELDS
 	const inputs = Array.from(document.querySelectorAll("input"));
 	inputs.forEach((input) => (input.value = ""));
+	const inputCheckBox = document.querySelector("input#is-read");
+	inputCheckBox.checked = false;
 	//CLOSING MODAL
 	modal.classList.remove("display-modal");
 });
