@@ -119,7 +119,7 @@ const createBook = function (title, author, pages, isRead) {
 	bookCard.appendChild(bookCardInfoStatusItems);
 
 	// ADDING BOOK TO THE BOOKSHELF
-	books.appendChild(bookCard);
+	books.insertBefore(bookCard, books.firstChild);
 
 	// ADDING BOOK TO THE LIBRARY LIST
 	library.push(bookCard);

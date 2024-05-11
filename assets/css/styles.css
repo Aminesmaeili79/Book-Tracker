@@ -341,3 +341,27 @@ main {
 .status-unread {
 	background-color: var(--color-unread);
 }
+/* CREDITS STYLES */
+.signature {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: var(--color-header-bg);
+
+	grid-column: 1 / -1;
+	justify-self: center;
+	align-self: end;
+
+	/* position: absolute;
+	left: 50%;
+	bottom: 1rem;
+	transform: translateX(-50%); */
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.svg-github {
+	width: 2.4rem;
+	fill: var(--color-header-bg);
+	stroke: var(--color-header-bg);
+}
